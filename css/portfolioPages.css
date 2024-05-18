@@ -1,0 +1,96 @@
+.back span {
+	position: fixed;
+	transform: rotate(135deg);
+    left: 5vh;
+    top: 50vh;
+    padding: 2vh;
+}
+.back span:hover {
+	color: #f90;
+}
+#wrapper {
+	overflow: auto;
+	height: 100vh;
+	box-sizing: border-box;
+	padding-bottom: 10vh;
+}
+#wrapper h1 {
+	margin: 0 9vh 9vh 9vh;
+	border-bottom: solid 0.3vh;
+	font-size: 15vh;
+}
+#modules {
+	width: 75%;
+	margin: auto;
+}
+
+/* Modules */
+.side-by-side {
+	display: flex;
+	padding-bottom: 3vh;
+	align-items: center;
+}
+.side-by-side > * {
+	width: 50%;
+	box-sizing: border-box;
+}
+.side-by-side > *:first-child {
+	float: left;
+	padding-right: 4.5vh;
+	text-align: left;
+}
+.side-by-side > *:last-child {
+	float: right;
+	padding-left: 4.5vh;
+	text-align: right;
+}
+.side-by-side img {
+	padding-bottom: 3vh;
+}
+.cover {
+	margin-top: 5vh;
+	font-size: 10vh;
+	font-weight: 600;
+}
+.cover p {
+	font-size: 2.3vh;
+}
+.cover iframe {
+	width: 100%;
+	aspect-ratio: 53/30;
+	filter: saturate(1.5);
+}
+.italic {
+	font-style: italic;
+}
+.orange {
+	color: #f90;
+	font-weight: 500;
+	font-size: 3vh;
+	margin-top: 5vh;
+	margin-bottom: 5vh;
+	text-align: center;
+}
+.caption {
+	margin-bottom: 2vh;
+}
+.caption > * {
+	text-align: left;
+	margin: 0;
+}
+
+/* Crack nav bar fix ugh
+	Basically, the iframes fuck up the nav bar, unless it render once the iframe has already entered the DOM.
+	So by forcing the nav bar to render 0.1s late in an animation, the problem is fixed.
+	Stupid solution, but at least for now it is what it is */
+nav {
+	animation: nav-fix 0.1s;
+}
+@keyframes nav-fix {
+	0% {
+		display: none;
+		}
+	100% {
+		display: block;
+		}
+}

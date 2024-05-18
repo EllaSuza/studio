@@ -1,0 +1,153 @@
+/* General */
+html {
+	scroll-behavior: smooth;
+}
+body {
+    margin: 0;
+    text-align: center;
+    font-family: "Ojuju", sans-serif;
+	font-size: 2.3vh;
+	overflow: hidden;
+}
+::-webkit-scrollbar {
+	width: 0.5vh;
+}
+::-webkit-scrollbar-thumb {
+	background: #f90;
+}
+img {
+    width: 100%;
+	transition: 0.4s;
+	filter: saturate(1.5);
+}
+h1 {
+    opacity: 0.85;
+    font-weight: 700;
+    font-size: 10vh;
+	pointer-events: none;
+}
+h2 {
+    opacity: 0.85;
+    font-weight: 600;
+    font-size: 4vh;
+	transition: 0.4s;
+	pointer-events: none;
+}
+p {
+    font-family: "Chakra Petch", sans-serif;
+	font-weight: lighter;
+}
+a {
+    text-decoration: none;
+    color: inherit;
+}
+.info {
+    color: #f90;
+}
+.panels {
+    height: 100vh;
+    display: inline-block;
+    overflow-y: auto;
+}
+
+/* Navigation bar */
+span {
+	border: solid;
+	border-width: 0 0.3vh 0.3vh 0;
+	padding: 0.5vh;
+	font-size: 0;
+	display: inline-block;
+	transition: 0.4s;
+}
+nav {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+	z-index: 1;
+	backdrop-filter: blur(10px);
+	-webkit-backdrop-filter: blur(10px);
+}
+nav a div {
+    width: 33.333%;
+    font-weight: 600;
+    display: inline-block;
+    color: black;
+    padding: 1vh 0 1vh 0;
+	white-space: nowrap;
+}
+#portfolio, #ella, #contact {
+    transition: 0.4s;
+}
+
+/* Navigation buttons */
+#portfolio {
+	background: rgb(230, 230, 230, 0.65);
+	float: left;
+	animation: 3s Nella;
+}
+#ella {
+	background: #f90;
+	animation: 3s ella;
+}
+#contact {
+	color: white;
+	background: rgb(26, 26, 26, 0.65);
+    float: right;
+	animation: 3s Nella;
+
+}
+#ella:hover {
+	color: white;
+
+}
+#portfolio:hover, #contact:hover {
+	background: rgb(255, 153, 0, 0.85);
+	color: white;
+}
+
+/* Arrows */
+#portfolio span {
+	transform: rotate(135deg);
+	border-color: rgb(230, 230, 230, 0);
+}
+#ella span {
+	border-color: #f90;
+}	
+#contact span {
+	transform: rotate(-45deg);
+	border-color: rgb(26, 26, 26, 0);
+}
+#portfolio:hover span {
+	border-color: white;
+	margin: 0 5vh 0 0;
+}
+#ella:hover span {
+	border-color: white;
+	margin: 0 5vh;
+}
+#contact:hover span {
+	border-color: white;
+	margin: 0 0 0 5vh;
+}
+
+
+
+/* Phone */
+@media only screen and (max-width: 600px) {
+	/* Temporarily, no phone */
+	body::after {
+		content: '\A \A Phone site coming soon! \A Please look at me on a computer for now. \A \A Thank you!';
+		white-space: pre-wrap;
+		position: fixed;
+		background: #f90;
+		height: 100vh;
+        top: 0;
+        left: 0;
+        z-index: 10;
+		color: white;
+		font-size: 5vh;
+		font-weight: 700;
+		text-align: left;
+		padding: 5vh;
+	}
+}

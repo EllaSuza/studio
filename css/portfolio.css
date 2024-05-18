@@ -1,0 +1,139 @@
+p {
+    padding-left: 2vh;
+    padding-right: 2vh;
+}
+/* Portfolio */
+#archive, #current {
+    width: 50%;
+	scroll-behavior: smooth;
+}
+#current {
+    float: right;
+    background: black;
+    color: white;
+}
+.cont {
+    margin: 0 9vh 9vh 9vh;
+    padding-bottom: 6vh;
+    transition: 0.4s;
+}
+.cont div {
+	width: 100%;
+	aspect-ratio: 3/2;
+	transition: 0.4s;
+	overflow: hidden;
+}
+.cont:hover div {
+	background-size: 110%;
+	box-shadow: 0 -0.5vh #f90;
+}
+.cont:hover h2 {
+	font-weight: 650;
+}
+.cont img {
+	min-height: 100%;
+}
+.cont:hover img {
+	transform: scale(1.03);
+}
+.desc {
+	transition: 0.4s;
+    opacity: 0.65;
+}
+.cont:hover .desc {
+	opacity: 1;
+}
+
+/* Portfolio index */
+#title {
+    width: 33.333%;
+	background: #f90;
+	color: white;
+	position: relative;
+	z-index: 2;
+}
+#grid {
+    width: 66.666%;
+	float: right;
+	padding-bottom: 10vh;
+	box-sizing: border-box;
+}
+#grid::-webkit-scrollbar-thumb {
+	background: black;
+}
+#currentGrid, #archiveGrid {
+	display: inline-block;
+	margin-bottom: 0;
+}
+#currentGrid h2, #archiveGrid h2 {
+	margin-bottom: 0;
+}
+#title h1{
+	line-height: 80vh;
+}
+.gridItem {
+	font-family: "Chakra Petch", sans-serif;
+	float: left;
+	width: 33.333%;
+	height: 33.333%;
+	box-sizing: border-box;
+	padding: 5vh;
+	transition: 0.4s;
+}
+.gridImg {
+	height: 20vh;
+	overflow: hidden;
+	transition: 0.4s;
+}
+.gridImg img {
+	min-height: 20vh;
+}
+.gridDesc {
+	padding: 2vh 0 2vh 0;
+	transition: 0.4s;
+}
+.gridItem:hover .gridDesc{
+	box-shadow: 0 0.3vh #f90;
+}
+.gridItem:hover img {
+	transform: scale(1.1);
+}
+
+/*	Intro animation */
+@keyframes ella {
+	0% {
+		padding: 50vh 0 50vh 0;
+		width: 100%;
+		opacity: 0.85;
+		font-size: 3.5vh;
+		color: white;
+		pointer-events: none;
+		}
+	30% {
+		padding: 50vh 0 50vh 0;
+		opacity: 0.85;
+		font-size: 3.5vh;
+		color: white;
+		}
+	80% {
+		padding: 1vh 0 1vh 0;
+		width: 100%;
+		opacity: 1;
+		pointer-events: none;
+		}
+	100% {
+		width: 33.333%;
+		pointer-events: revert;
+		}
+}
+@keyframes Nella {
+	0% {
+		width: 0%;
+		}
+	80% {
+		width: 0%;
+		}
+	100% {
+		width: 33.333%;
+		}
+}

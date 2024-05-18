@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+		<meta charset="utf-8">
+		<meta name="description" content="">
+		<meta name="keywords" content="">
+		<meta name="author" content="David Fons Lathrop">
+		<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1"/>
+		<title>About Ella</title>
+		<!--[if IE]>
+			<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+		<![endif]-->
+		<!--[if lt IE 9]>
+			<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+			<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>  
+		<![endif]-->
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,300;1,300&family=Ojuju:wght@200..800&display=swap">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,300;1,300&family=Ojuju:wght@200..800&display=swap">
+		<link rel="stylesheet" type="text/css" href="css/main.css">
+		<link rel="stylesheet" type="text/css" href="css/ella.css">
+		<link rel="shortcut icon" href="img/icon.ico"/>
+	</head>
+	<body>
+        <nav>
+            <a href="index.html">
+                <div id="portfolio"><span></span>PORTFOLIO</div>
+            </a>
+            <a href="#main">
+                <div id="ella"><span style="transform:rotate(135deg);"></span>ELLA SUZANNE<span style="transform:rotate(-45deg);"></span></div>
+            </a>
+            <a href="#contactPage">
+                <div id="contact">CONTACT<span></span></div>
+            </a>
+        </nav>
+		<div id="main">
+			<div>
+				<img src="img/ella.webp"/>
+				<a href="cv.pdf" target="_blank">
+					<div id="attr">Download</div>
+				</a>
+			</div>
+			<div id="pages">
+				<div id="tabNav">
+					<div class="tab active" onclick="openTab(event, 'skills')">SKILLS</div>
+					<div class="tab" onclick="openTab(event, 'exp')">EXPERIENCE</div>
+					<div class="tab right" onclick="openTab(event, 'edu')">EDUCATION</div>
+				</div>
+				<div id="skills" class="tabCont" style="display:block;">
+					<h2>HARD SKILLS</h2>
+					<div>
+						<div class="tag">AutoDesk Fusion 360</div>
+						<div class="level" style="--width:80%;"></div>
+					</div>
+					<div>
+						<div class="tag">Blender</div>
+						<div class="level" style="--width:60%;"></div>
+					</div>
+					<div>
+						<div class="tag">Arduino</div>
+						<div class="level" style="--width:60%;"></div>
+					</div>
+					<div>
+						<div class="tag">3D printing</div>
+						<div class="level" style="--width:60%;"></div>
+					</div>
+					<div>
+						<div class="tag">Computer controlled cutting</div>
+						<div class="level" style="--width:40%;"></div>
+					</div>
+					<div>
+						<div class="tag">HTML + CSS</div>
+						<div class="level" style="--width:40%;"></div>
+					</div>
+					<div>
+						<div class="tag">Adobe Indesign</div>
+						<div class="level" style="--width:100%;"></div>
+					</div>
+					<h2>LANGUAGES</h2>
+					<div>
+						<div class="tag">English</div>
+						<div class="level" style="--width:100%;"></div>
+					</div>
+					<div>
+						<div class="tag">Dutch</div>
+						<div class="level" style="--width:100%;"></div>
+					</div>
+					<div>
+						<div class="tag">Spanish</div>
+						<div class="level" style="--width:40%;"></div>
+					</div>
+				</div>
+				<div id="exp" class="tabCont">
+					<h2>Digital Fabrication at Fablab Waag</h2>
+					<div>
+						<p class="info">Internship | Amsterdam, The Netherlands<br/>January 2023 - June 2023</p>
+						<p>Holding open days</p>
+						<p>Giving workshops</p>
+						<p>Maintanance and documentation of machinery</p>
+					</div>
+					<h2>The Social Media Bodies Workshop</h2>
+					<div>
+						<p class="info">Cinekid Festival | Amsterdam, The Netherlands<br/>October 2022</p>
+						<p>Leading VR installation in collaboration with artists</p>
+						<p>Introducing VR realms to children</p>
+					</div>
+					<h2>Study Programme Committee</h2>
+					<div>
+						<p class="info">KABK student and teacher body | Den Haag, The Netherlands<br/>October 2022 -</p>
+						<p>Leading VR installation in collaboration with artists</p>
+						<p>Introducing VR realms to children</p>
+					</div>
+					<h2>Open Digital Libraries</h2>
+					<div>
+						<p class="info">KB - KABK | Amsterdam, The Netherlands<br/>January 2023 - June 2022</p>
+						<p>Interactive installation as part of exhibition at KB</p>
+						<p>Reviving Alba Amicorum and making it relevant to students of today</p>
+					</div>
+					<h2>Hostess and UX Research</h2>
+					<div>
+						<p class="info">Rijksmuseum | Amsterdam, The Netherlands<br/>2019 - 2020</p>
+						<p>Collecting data from guests on events and exhibitions</p>
+						<p>Worked in large team at gardarobe</p>
+					</div>
+				</div>
+				<div id="edu" class="tabCont">
+					<h2>Interactive Media Design</h2>
+					<div class="info">Bachelors at KABK | 2020 - 2024</div>
+					<h2>Design for Sustainability</h2>
+					<div class="info">Course at University of the Arts, London | April 2020</div>
+					<h2>Think Global School</h2>
+					<div class="info">High school diploma | International boarding school 2016-2019</div>
+				</div>
+			</div>
+		</div>
+		<div id="bio">
+			<h1>ELLA<br/>SUZANNE<br/>GORTER<br/>OUDHOF</h1>
+			<p class="pronouns">SHE/HER</p>
+			<p class="statement">I use combinations of physical and digital media as a form of research. Through sensitive, interactive tools, I step into conversation and co-creation with my environment; humans within our biosphere and technosphere. Can the artificial, synthetic, and technological embrace natural states of being?</p>
+		</div>
+		<div id="contactPage">
+			<div id="socials" class="panels">
+				<h1>Contact</h1>
+			</div>
+			<div id="formBox" class="panels">
+				<form action="https://api.staticforms.xyz/submit" method="post">
+					<input type="hidden" name="accessKey" value="69ed1af4-c7ec-4e4f-90b4-19e0040ff863">
+					<input type="hidden" name="replyTo" value="@">
+					<input type="text" name="honeypot" style="display: none;">
+					<input type="hidden" name="redirectTo" value="ella.html#thanks">
+					<div id="form">
+						<input type="text" placeholder="Name" name="name" autocomplete="name" required>
+						<input type="email" placeholder="Email" name="email" autocomplete="email" required>
+						<textarea placeholder="What would you like to tell me?" name="message" required></textarea>
+						<button type="submit">SEND</button>
+					</div>
+				</form>
+			</div>
+		</div>
+		<div id="thanks" class="modal-cover">
+			THANK YOU!
+			<a href="#contactPage"></a>
+		</div>
+		<script>
+			function openTab(evt, tabName) {
+				var i, tabCont, tab;
+				tabCont = document.getElementsByClassName("tabCont");
+				for (i = 0; i < tabCont.length; i++) {
+					tabCont[i].style.display = "none";
+				}
+				tab = document.getElementsByClassName("tab");
+				for (i = 0; i < tab.length; i++) {
+					tab[i].className = tab[i].className.replace(" active", "");
+				}
+				document.getElementById(tabName).style.display = "block";
+				evt.currentTarget.className += " active";
+			}
+		</script>
+	</body>
+</html>
