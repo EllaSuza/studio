@@ -41,13 +41,11 @@ a {
     text-decoration: none;
     color: inherit;
 }
-.info {
-    color: #f90;
+.back span {
+	border-width: 0 0.6vh 0.6vh 0;
 }
-.panels {
-    height: 100vh;
-    display: inline-block;
-    overflow-y: auto;
+.paintCont img{
+	filter: none;
 }
 
 /* Navigation bar */
@@ -100,9 +98,14 @@ nav a div {
 	color: white;
 
 }
-#portfolio:hover, #contact:hover {
-	background: rgb(255, 153, 0, 0.85);
+#portfolio:hover {
+	background: rgb(0, 0, 0, 0.85);
 	color: white;
+}
+
+#contact:hover {
+	background: rgb(255, 255, 255, 0.85);
+	color: black;
 }
 
 /* Arrows */
@@ -115,19 +118,19 @@ nav a div {
 }	
 #contact span {
 	transform: rotate(-45deg);
-	border-color: rgb(26, 26, 26, 0);
+	border-color: rgb(255, 255, 255, 0);
 }
 #portfolio:hover span {
 	border-color: white;
-	margin: 0 5vh 0 0;
+	margin: 0 5vh 0.3vh 0;
 }
 #ella:hover span {
 	border-color: white;
-	margin: 0 5vh;
+	margin: 0vh 5vh 0.3vh 5vh;
 }
 #contact:hover span {
-	border-color: white;
-	margin: 0 0 0 5vh;
+	border-color: black;
+	margin: 0 0 0.3vh 5vh;
 }
 
 

@@ -1,8 +1,8 @@
 .back span {
 	position: fixed;
 	transform: rotate(135deg);
-    left: 5vh;
-    top: 50vh;
+    left: 10vh;
+    top: 10vh;
     padding: 2vh;
 }
 .back span:hover {
@@ -22,6 +22,9 @@
 #modules {
 	width: 75%;
 	margin: auto;
+}
+.paintSat img {
+	filter: none;
 }
 
 /* Modules */
