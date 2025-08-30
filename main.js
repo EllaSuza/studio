@@ -12,6 +12,12 @@ function createGridItem(contentElement) {
   gridImg.classList.add('gridImg');
   const img = document.createElement('img');
   img.src = contentElement.querySelector('img').src;
+
+  // If the source .cont has .paintCont, add it to the new image/div too
+  if (contentElement.classList.contains('paintCont')) {
+    gridItem.classList.add('paintCont'); // whole item
+  }
+
   gridImg.appendChild(img);
 
   const gridDesc = document.createElement('div');
@@ -54,6 +60,7 @@ for (const contentElement of contentElements) {
     console.warn(`.cont element with id "${contentElement.id}" not found within a known container.`);
   }
 }
+
 
 
 
