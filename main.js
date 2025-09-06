@@ -81,4 +81,65 @@ function openTab(evt, tabName) {
 				}
 				document.getElementById(tabName).style.display = "block";
 				evt.currentTarget.className += " active";
-			}
+}
+
+
+
+
+
+
+
+
+
+
+//change title tag
+function updateTitleFromHash() {
+      switch (window.location.hash) {
+        case "#portfolioIndex":
+          document.title = "Portfolio";
+          break;
+        case "#paintingIndex":
+          document.title = "Paintings";
+          break;
+        case "#ellaPage":
+          document.title = "Ella Suzanne";
+          break;
+        case "#ellaPage":
+          document.title = "Ella Suzanne";
+          break;
+        default:
+          document.title = "Home";
+      }
+    }
+
+    // Run on load
+    updateTitleFromHash();
+
+    // Run when hash changes
+    window.addEventListener("hashchange", updateTitleFromHash);
+
+
+
+
+// Move the nav button on the phone
+document.getElementById("currentBtn").addEventListener("click", function () {
+  const nav = document.querySelector("nav");
+
+  nav.style.left = "75vw";
+});
+document.getElementById("archiveBtn").addEventListener("click", function () {
+  const nav = document.querySelector("nav");
+
+  nav.style.left = "5vw";
+});
+
+
+// Phone CV button
+  document.getElementById("cvLink").addEventListener("click", function(e) {
+    e.preventDefault();
+    const div = document.getElementById("ellaPage");
+    div.scrollTo({
+      top: div.scrollHeight,
+      behavior: "smooth"
+    });
+  });
