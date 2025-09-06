@@ -13,7 +13,7 @@ body {
 	width: 0.5vh;
 }
 ::-webkit-scrollbar-thumb {
-	background: #f90;
+	background: #8C0000;
 }
 img {
     width: 100%;
@@ -47,6 +47,9 @@ a {
 .paintCont img{
 	filter: none;
 }
+#ellaPhone {
+	display: none;
+}
 
 /* Navigation bar */
 span {
@@ -69,7 +72,6 @@ nav a div {
     width: 33.333%;
     font-weight: 600;
     display: inline-block;
-    color: black;
     padding: 1vh 0 1vh 0;
 	white-space: nowrap;
 }
@@ -84,18 +86,15 @@ nav a div {
 	animation: 3s Nella;
 }
 #ella {
-	background: #f90;
+	background: #8C0000;
 	animation: 3s ella;
+	color: white;
 }
 #contact {
 	color: white;
 	background: rgb(26, 26, 26, 0.65);
     float: right;
 	animation: 3s Nella;
-
-}
-#ella:hover {
-	color: white;
 
 }
 #portfolio:hover {
@@ -114,7 +113,7 @@ nav a div {
 	border-color: rgb(230, 230, 230, 0);
 }
 #ella span {
-	border-color: #f90;
+	border-color: #8C0000;
 }	
 #contact span {
 	transform: rotate(-45deg);
@@ -137,20 +136,31 @@ nav a div {
 
 /* Phone */
 @media only screen and (max-width: 600px) {
-	/* Temporarily, no phone */
-	body::after {
-		content: '\A \A Phone site coming soon! \A Please look at me on a computer for now. \A \A Thank you!';
-		white-space: pre-wrap;
-		position: fixed;
-		background: #f90;
-		height: 100vh;
-        top: 0;
-        left: 0;
-        z-index: 10;
+	#portfolio, #contact {
+		display: none;
+	}
+	nav {
+		width: 20vw;
+		height: 20vw;
+		border-radius: 50%;
+		background: rgb(140 0 0 / 85%);
+		bottom: 5vw;
+		left: 5vw;
+		box-shadow: 0 1vh 5vh rgb(0 0 0 / 30%);
+		transition: 0.5s;
+		line-height: 15.5vw;
+		animation: phoneAni 3s;
+	}
+	nav a div {
+		width: 100%;
+	}
+	#ella {
+		display: none;
+	}
+	#ellaPhone {
+		display: block;
+		height: 8vh;
+		font-size: 7.5vw;
 		color: white;
-		font-size: 5vh;
-		font-weight: 700;
-		text-align: left;
-		padding: 5vh;
 	}
 }

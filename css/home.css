@@ -10,10 +10,25 @@ p {
 #main, .grid {
 	animation: 0.8s fade-in;
 }
+#btnWrapper, #cvLink, #downloadBtn {
+	display: none;
+}
 
 /* Home */
+#ani {
+	position: fixed;
+	width: 10%;
+	left: 0;
+	top: 800000vh;
+	z-index: 5;
+	margin: 0 45%;
+	opacity: 0;
+	animation:
+		spin 1.5s infinite linear,
+		ani 3s;
+}
 .info {
-    color: #f90;
+    color: #8C0000;
 }
 .cont {
     margin: 0 9vh 9vh 9vh;
@@ -28,7 +43,7 @@ p {
 }
 .cont:hover div {
 	background-size: 110%;
-	box-shadow: 0 -0.5vh #f90;
+	box-shadow: 0 -0.5vh #8C0000;
 }
 .cont:hover h2 {
 	font-weight: 650;
@@ -83,13 +98,13 @@ p {
 	opacity: 1;
 }
 .backPaint span:hover {
-	color: #f90;
+	color: #8C0000;
 }
 
 /* Portfolio */
 #title {
     width: 33.333%;
-	background: #f90;
+	background: #8C0000;
 	color: white;
 	position: relative;
 	z-index: 2;
@@ -143,7 +158,7 @@ p {
 	transition: 0.4s;
 }
 .gridItem:hover .gridDesc{
-	box-shadow: 0 0.3vh #f90;
+	box-shadow: 0 0.3vh #8C0000;
 }
 .gridItem:hover img {
 	transform: scale(1.1);
@@ -151,7 +166,7 @@ p {
 
 /* Ella page */
 #main, #bio {
-    height: 100vh;
+    height: 100svh;
     display: inline-block;
 }
 #main {
@@ -164,15 +179,15 @@ p {
 	width: 25%;
 	display: inline-block;
 }
-#main img {
-	width: 100%;
-}
 #bio {
 	width: 33.333%;
-	background: #f90;
+	background: #8C0000;
 	float: right;
 	box-sizing: border-box;
 	padding: 0 3vh;
+}
+#bio img {
+	display: none;
 }
 #bio h1 {
 	text-align: right;
@@ -188,7 +203,7 @@ p {
 	font-family: "Chakra Petch", sans-serif;
 }
 #attr:hover {
-	box-shadow: 0 0.3vh #f90;
+	box-shadow: 0 0.3vh #8C0000;
 }
 
 /* Ella page tabs */
@@ -210,7 +225,7 @@ p {
 	display: inline-block;
 	cursor: pointer;
 	transition: 0.4s;
-	padding: 1vh 0 1vh 0;
+	padding: 1vh 0;
 }
 .tab:hover {
 	font-weight: 550;
@@ -219,7 +234,7 @@ p {
 	float: right;
 }
 .active {
-	box-shadow: 0 0.3vh #f90;
+	box-shadow: 0 0.3vh #8C0000;
 	font-weight: 550;
 }
 .tabCont {
@@ -229,7 +244,7 @@ p {
 	margin-top: 3vh;
 	animation: 0.8s fade-in;
 	overflow: scroll;
-	height: 85vh;
+	height: 80vh;
 }
 .tabCont div {
     font-family: "Chakra Petch", sans-serif;
@@ -253,7 +268,7 @@ p {
 }
 .level::after {
 	content: '';
-	background: #f90;
+	background: #8C0000;
 	display: block;
 	height: 1vh;
 	width: var(--width);
@@ -270,6 +285,7 @@ p {
 .statement {
 	text-align: left;
 	padding-top: 10vh;
+	color: white;
 }
 svg {
 	width: 5vh;
@@ -308,21 +324,19 @@ svg {
 /* Animation */
 @keyframes ella {
 	0% {
-		padding: 50vh 0 50vh 0;
+		padding: 57vh 0 43vh 0;
 		width: 100%;
 		opacity: 0.85;
-		font-size: 3.5vh;
-		color: white;
+		font-size: 3.7vh;
 		pointer-events: none;
 		}
 	30% {
-		padding: 50vh 0 50vh 0;
+		padding: 57vh 0 43vh 0;
 		opacity: 0.85;
-		font-size: 3.5vh;
-		color: white;
+		font-size: 3.7vh;
 		}
 	80% {
-		padding: 1vh 0 1vh 0;
+		padding: 1vh 0;
 		width: 100%;
 		opacity: 1;
 		pointer-events: none;
@@ -332,6 +346,28 @@ svg {
 		pointer-events: revert;
 		}
 }
+@keyframes ani {
+	0% {
+		opacity: 1;
+		display: block;
+		top: 35vh;
+	}
+	30% {
+		opacity: 1;
+		display: block;
+		top: 35vh;
+	}
+	40% {
+		opacity: 0;
+	}
+	80% {
+		top: 80vh;
+	}
+	100% {
+		display: none;
+	}
+}
+/* Portfolio and painting buttons animation */
 @keyframes Nella {
 	0% {
 		width: 0%;
@@ -343,6 +379,7 @@ svg {
 		width: 33.333%;
 		}
 }
+/* Ella page CV animations */
 @keyframes fade-in {
 	0% {
 		opacity: 0%;
@@ -358,4 +395,158 @@ svg {
 	100% {
 		width: var(--width);
 		}
+}
+@keyframes spin {
+    from {
+        transform:rotate(0deg);
+    }
+    to {
+        transform:rotate(360deg);
+    }
+}
+@keyframes phoneAni {
+	0% {
+		bottom: 0;
+		left: 0;
+		width: 100vw;
+		height: 100vh;
+		border-radius: 0;
+		line-height: 1100vh;
+	}
+	30% {
+		bottom: 0;
+		left: 0;
+		width: 100vw;
+		height: 100vh;
+		border-radius: 0;
+		line-height: 1100vh;
+	}
+}
+/* Phone */
+@media only screen and (max-width: 600px) {
+	::-webkit-scrollbar {
+		width: 0;
+	}
+	h1 {
+		font-size: 6vh;
+	}
+	h2 {
+		font-size: 3vh;
+	}
+	#portfolioIndex:target, #paintingIndex:target {
+		display: none;
+	}
+	#ani {
+		width: 50%;
+		margin: 0 25%;
+	}
+	#phoneWrapper {
+		width: 200%;
+	}
+	#archive {
+		float: left;
+	}
+	#archive, #current {
+		width: 46%;
+	}
+	#btnWrapper {
+		display: inline-block;
+		width: 8%;
+		overflow: hidden;
+	}
+	#currentBtn, #archiveBtn {
+		width: 50%;
+		display: inline-block;
+		height: 100vh;
+	}
+	#currentBtn {
+		background: black;
+		color: white;
+		writing-mode: sideways-rl;
+	}
+	#archiveBtn {
+		float: right;
+		writing-mode: sideways-lr;
+	}
+	.cont {
+		margin: 0 0 9vh 0;
+	}
+	.desc {
+		padding: 0 2vh 0 2vh;
+	}
+	#sheet {
+		z-index: 6;
+	}
+	#portfolioIndex, #paintingIndex {
+		display: none;
+	}
+	#ellaPage {
+		overflow: auto;
+		height: 100vh;
+	}
+	.back {
+		display: block;
+	}
+	#main {
+		background: white;
+		width: 100%;
+		padding: revert;
+	}
+	#main img {
+		display: none;
+	}
+	#main > *:first-child {
+		display: none;
+	}
+	#pages {
+		float: revert;
+		padding: revert;
+		width: revert;
+		height: 94svh;
+		overflow: hidden;
+	}
+	.tab {
+		width: 32.9%;
+	}
+	#downloadBtn {
+		display: block;
+		float: right;
+		padding: 0 1svh 1svh 0;
+		width: 5svh;
+		height: 5svh;
+	}
+	#bio {
+		float: revert;
+		width: 100%;
+	}
+	#bio img {
+		display: revert;
+		border: .5vh solid rgb(255 255 255 / 85%);
+		box-sizing: border-box;
+		width: 50%;
+		margin-top: 5svh;
+	}
+	#bio h1 {
+		line-height: revert;
+		display: inline-block;
+		width: 100%;
+		margin: 2svh 0 0 0;
+		text-align: revert;
+		font-size: 6svh;
+	}
+	.pronouns {
+		text-align: revert;
+	}
+	.statement {
+		padding-top: 3svh;
+	}
+	.redes {
+		float: revert;
+	}
+	#cvLink {
+		display: revert;
+	}
+	.tabCont {
+		height: 100%;
+	}
 }
