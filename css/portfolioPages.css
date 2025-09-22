@@ -1,3 +1,8 @@
+iframe {
+	width: 100%;
+	aspect-ratio: 53/30;
+	filter: saturate(1.5);
+}
 .back span {
 	position: fixed;
 	transform: rotate(135deg);
@@ -16,8 +21,15 @@
 }
 #wrapper h1 {
 	margin: 0 9vh 9vh 9vh;
-	border-bottom: solid 0.3vh;
 	font-size: 15vh;
+}
+#wrapper h1::after {
+	content: '';
+	display: block;
+	margin: 5vh 40%;
+	width: 20%;
+	height: 0.3vh;
+	background: #8C0000;
 }
 #modules {
 	width: 75%;
@@ -51,17 +63,11 @@
 	padding-bottom: 3vh;
 }
 .cover {
-	margin-top: 5vh;
 	font-size: 10vh;
 	font-weight: 600;
 }
 .cover p {
 	font-size: 2.3vh;
-}
-.cover iframe {
-	width: 100%;
-	aspect-ratio: 53/30;
-	filter: saturate(1.5);
 }
 .italic {
 	font-style: italic;
@@ -81,6 +87,13 @@
 	text-align: left;
 	margin: 0;
 }
+#progress {
+	display: none;
+}
+
+/*Phone prog bar animation */
+
+
 
 /* Crack nav bar fix ugh
 	Basically, the iframes fuck up the nav bar, unless it render once the iframe has already entered the DOM.
@@ -100,20 +113,60 @@ nav {
 
 /* Phone */
 @media only screen and (max-width: 600px) {
-	/* Temporarily, no phone */
+	body {
+		overflow: revert;
+	}
 	body::after {
-		content: '\A \A Phone site coming soon! \A Please look at me on a computer for now. \A \A Thank you!';
-		white-space: pre-wrap;
-		position: fixed;
+		content:'';
+		display: block;
+		height: 1vh;
 		background: #8C0000;
-		height: 100vh;
-        top: 0;
-        left: 0;
-        z-index: 10;
-		color: white;
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 100%;
+		transform-origin: 0 50%;
+		animation: scaleProgress auto linear;
+		animation-timeline: scroll(root);
+	}
+	nav {
+		display: none;
+	}
+	p, .orange {
+		margin: 1.5vh;
+	}
+	#wrapper {
+		overflow: revert;
+	}
+	#wrapper h1 {
+		margin: 0 1vh;
 		font-size: 5vh;
-		font-weight: 700;
-		text-align: left;
-		padding: 5vh;
+		padding: 10vh 0;
+	}
+	#modules {
+		width: 100%;
+	}
+	.cover {
+		font-size: 5vh;
+		padding: 3vh 1.5vh;
+	}
+	.back span {
+		display: none;
+	}
+	.side-by-side {
+		display: revert;
+		padding: 0;
+	}
+	.side-by-side > *:first-child, .side-by-side > *:last-child {
+		width: 100%;
+		padding: 0;
+	}
+	@keyframes scaleProgress {
+		0% {
+			transform: scaleX(0);
+		}
+		100% {
+			transform: scaleX(1);
+		}
 	}
 }
