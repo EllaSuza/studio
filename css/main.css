@@ -52,7 +52,7 @@ a {
 }
 
 /* Navigation bar */
-span {
+a span {
 	border: solid;
 	border-width: 0 0.3vh 0.3vh 0;
 	padding: 0.5vh;
