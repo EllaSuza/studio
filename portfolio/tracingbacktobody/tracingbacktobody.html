@@ -20,9 +20,16 @@
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,300;1,300&family=Ojuju:wght@200..800&display=swap">
 		<link rel="stylesheet" type="text/css" href="../../css/main.css">
 		<link rel="stylesheet" type="text/css" href="../../css/portfolioPages.css">
+		<link rel="stylesheet" type="text/css" href="../../prettify.css">
 		<link rel="shortcut icon" href="../../img/icon.ico"/>
+		<style>
+			pre {
+				text-align: left;
+				padding: 2vh 0 2vh 2vh;
+			}
+		</style>
 	</head>
-	<body>
+	<body onload="PR.prettyPrint()">
        <my-nav></my-nav>
 		<a href="/studio/" class="back">
 			<span></span>
@@ -223,6 +230,7 @@
 			</div>
 		</div>
 		<script type="text/javascript" src="../../nav.js"></script>
+		<script type="text/javascript" src="../../prettify.js"></script>
 	</body>
 </html>
 
