@@ -15,18 +15,6 @@ p {
 }
 
 /* Home */
-#ani {
-	position: fixed;
-	width: 10%;
-	left: 0;
-	top: 800000vh;
-	z-index: 5;
-	margin: 0 45%;
-	opacity: 0;
-	animation:
-		spin 1.5s infinite linear,
-		ani 3s;
-}
 .info {
     color: #8C0000;
 }
@@ -323,103 +311,40 @@ svg {
 
 /* Animation */
 @keyframes ella {
-	0% {
-		padding: 57vh 0 43vh 0;
+	from {
 		width: 100%;
-		opacity: 0.85;
-		font-size: 3.7vh;
-		pointer-events: none;
-		}
-	30% {
-		padding: 57vh 0 43vh 0;
-		opacity: 0.85;
-		font-size: 3.7vh;
-		}
-	80% {
-		padding: 1vh 0;
-		width: 100%;
-		opacity: 1;
-		pointer-events: none;
-		}
-	100% {
+	}
+	to {
 		width: 33.333%;
 		pointer-events: revert;
-		}
-}
-@keyframes ani {
-	0% {
-		opacity: 1;
-		display: block;
-		top: 35vh;
-	}
-	30% {
-		opacity: 1;
-		display: block;
-		top: 35vh;
-	}
-	40% {
-		opacity: 0;
-	}
-	80% {
-		top: 80vh;
-	}
-	100% {
-		display: none;
 	}
 }
 /* Portfolio and painting buttons animation */
 @keyframes Nella {
-	0% {
+	from {
 		width: 0%;
-		}
-	80% {
-		width: 0%;
-		}
-	100% {
+		opacity: 0;
+	}
+	to {
 		width: 33.333%;
-		}
+		opacity: 1;
+	}
 }
 /* Ella page CV animations */
 @keyframes fade-in {
 	0% {
 		opacity: 0%;
-		}
+	}
 	100% {
 		opacity: 1;
-		}
+	}
 }
 @keyframes bar-fade {
 	0% {
 		width: 0%;
-		}
+	}
 	100% {
 		width: var(--width);
-		}
-}
-@keyframes spin {
-    from {
-        transform:rotate(0deg);
-    }
-    to {
-        transform:rotate(360deg);
-    }
-}
-@keyframes phoneAni {
-	0% {
-		bottom: 0;
-		left: 0;
-		width: 100vw;
-		height: 100vh;
-		border-radius: 0;
-		line-height: 1100vh;
-	}
-	30% {
-		bottom: 0;
-		left: 0;
-		width: 100vw;
-		height: 100vh;
-		border-radius: 0;
-		line-height: 1100vh;
 	}
 }
 /* Phone */
@@ -435,10 +360,6 @@ svg {
 	}
 	#portfolioIndex:target, #paintingIndex:target {
 		display: none;
-	}
-	#ani {
-		width: 50%;
-		margin: 0 25%;
 	}
 	#phoneWrapper {
 		width: 200%;
