@@ -1,0 +1,132 @@
+pattern key:
+CH
+DC
+SL ST
+DC-BLO
+BEG (X)CH
+V-ST
+PICOT
+
+
+
+
+Calendar 2
+
+start() {
+    MC;
+}
+
+round1(16DC) {
+    3CH; // COUNTS AS 1ST DC
+    15DC; // INTO MC
+    SL ST TO TOP OF BEG 3CH;
+}
+
+round2(16DC-BLO + 16CH-SP = 32ST) {
+    4CH;
+    repeatAround {
+        1DC-BLO IN NEXT ST;
+        1CH;
+    }
+    SL ST TO 3RD CH OF BEG 4CH;
+}
+
+round3(16SC + 16[3CH-SP] = 64ST) {
+    1CH;
+    repeatAround {
+        1SC IN NEXT 1CHSP;
+        3CH;
+    }
+    SL ST TO TOP OF FIRST SC;
+}
+
+round4(16[3DC IN 3CH-SP] = 48ST) {
+    SL ST IN NEXT 3CH-SP;
+    3CH;
+    2DC IN SAME 3CH-SP;
+    repeatAround {
+        3DC IN NEXT 3CH-SP;
+    }
+    SL ST TO TOP OF BEG 3CH;
+}
+
+round5(16V-ST) {
+    SL ST INTO NEXT DC;
+    5CH;
+    1DC IN SAME ST AT BEG 5CH; //COUNTS AS FIRST V-ST
+    repeatAround {
+        MISS NEXT 2DC;
+        1V-ST IN NEXT DC;
+    }
+    SL ST TO 3RD OF BEG 5CH
+}
+
+round6(64DC + 16[2CH-SP] = 96ST) {
+
+    SL ST INTO NEXT 2CH-SP; //MIDDLE OF V-ST
+    inNext2CH-SP {
+        3CH; //COUNTS AS 1ST DC
+        1DC;
+        2CH;
+        2DC;
+    }
+    repeatAround {
+        inNext2CH-SP {
+            2DC;
+            2CH;
+            2DC;
+        }
+    }
+    SL ST TO TOP OF BEG 3CH;
+}
+
+round7(96DC + 16[6CH-SP] = 192ST) {
+    3CH; //COUNTS AS 1ST DC
+    1DC IN NEXT DC;
+    repeatAround {
+        inNext2CH-SP {
+            1DC;
+            6CH;
+            1DC;
+        }
+        1DC IN EACH NEXT 4DC;
+    } //LAST REPEAT ENDS WITH 2DC CONNECTING TO BEG 3CH + 1DC
+
+}
+
+round8(96SC + 16PICOTS + 16[3CH-SP]) {
+    SL ST ACROSS 2DC;
+    SL ST INTO 6CH-SP;
+    1CH;
+    repeatAround {
+        inNext6ch-SP {
+            3SC;
+            1CH;
+            PICOT;
+            1CH;
+            3SC;
+        }
+        MISS NEXT 6DC;
+    }
+    SL ST TO FIRST SC;
+}
+
+
+
+
+						3	1CH<br>
+							[1 SC INTO NEXT 1CH-SP, 3CH] REPEAT AROUND<br>
+							SL ST TO TOP OF FIRST SC <br>
+							// RESULT OF 16SC + 16[3CH-SP] ; 64ST<br>
+						4	ST ST INTO NEXT 3CH-SP<br>
+							3CH<br>
+							2DC IN SAME 2CH-SP<br>
+							[3DC INTO NEXT 3CH-SP] REPEAT AROUND<br>
+							SL ST TO TOP OF BEG 3CH<br>
+							// RESULT OF 16[3DC IN 3CH-SP] ; 48ST<br>
+						6	<br>
+						7<br>
+						8<br>
+						9<br>
+
+

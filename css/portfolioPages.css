@@ -3,6 +3,21 @@ iframe {
 	aspect-ratio: 53/30;
 	filter: saturate(1.5);
 }
+h2 {
+    opacity: 0.85;
+    font-weight: 600;
+    font-size: 6vh;
+	transition: 0.4s;
+	pointer-events: none;
+}
+h3 {
+    opacity: 0.85;
+    font-weight: 600;
+    font-size: 4vh;
+	transition: 0.4s;
+	pointer-events: none;
+	color:#8C0000;
+}
 .back span {
 	position: fixed;
 	transform: rotate(135deg);
