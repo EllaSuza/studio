@@ -13,11 +13,6 @@ function createGridItem(contentElement) {
   const img = document.createElement('img');
   img.src = contentElement.querySelector('img').src;
 
-  // If the source .cont has .paintCont, add it to the new image/div too
-  if (contentElement.classList.contains('paintCont')) {
-    gridItem.classList.add('paintCont'); // whole item
-  }
-
   gridImg.appendChild(img);
 
   const gridDesc = document.createElement('div');
@@ -32,28 +27,21 @@ function createGridItem(contentElement) {
 }
 
 // Container variables (assuming they exist)
-const currentContainer = document.querySelector('#current');
-const archiveContainer = document.querySelector('#archive');
+const archiveContainer = document.querySelector('#studioSect');
+const currentContainer = document.querySelector('#marketSect');
 
-const currentGrid = document.querySelector('#currentGrid');
-const archiveGrid = document.querySelector('#archiveGrid');
+const archiveGrid = document.querySelector('#studioGrid');
 const paintGrid = document.querySelector('#paintGrid'); // new section
 
 // Loop through all .cont elements
 for (const contentElement of contentElements) {
   const gridItem = createGridItem(contentElement);
 
-  // If it's a .paintCont, send it straight to #paintGrid
-  if (contentElement.classList.contains('paintCont')) {
-    paintGrid.appendChild(gridItem);
-    continue;
-  }
-
   // Otherwise check the parent container
   const parentContainer = contentElement.parentElement; // Assuming a direct parent container
 
   if (parentContainer === currentContainer) {
-    currentGrid.appendChild(gridItem); // Add to current section
+    paintGrid.appendChild(gridItem); // Add to current section
   } else if (parentContainer === archiveContainer) {
     archiveGrid.appendChild(gridItem); // Add to archive section
   } else {
@@ -95,16 +83,13 @@ function openTab(evt, tabName) {
 //change title tag
 function updateTitleFromHash() {
       switch (window.location.hash) {
-        case "#portfolioIndex":
-          document.title = "Portfolio";
+        case "#studio":
+          document.title = "Studio";
           break;
-        case "#paintingIndex":
-          document.title = "Paintings";
+        case "#market":
+          document.title = "Market";
           break;
-        case "#ellaPage":
-          document.title = "Ella Suzanne";
-          break;
-        case "#ellaPage":
+        case "#ella":
           document.title = "Ella Suzanne";
           break;
         default:
