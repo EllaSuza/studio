@@ -71,7 +71,7 @@ p {
 .hidden {
 	display: none;
 }
-#portfolioIndex:target, #ellaPage:target, #paintingIndex:target {
+#studio:target, #ella:target, #market:target {
 	display: block;
 }
 .back span {
@@ -97,11 +97,11 @@ p {
 	position: relative;
 	z-index: 2;
 }
-#archive, #current {
+#studioSect, #marketSect {
     width: 50%;
 	scroll-behavior: smooth;
 }
-#current {
+#marketSect {
     float: right;
     background: black;
     color: white;
@@ -358,16 +358,16 @@ svg {
 	h2 {
 		font-size: 3vh;
 	}
-	#portfolioIndex:target, #paintingIndex:target {
+	#studio:target, #market:target {
 		display: none;
 	}
 	#phoneWrapper {
 		width: 200%;
 	}
-	#archive {
+	#studioSect {
 		float: left;
 	}
-	#archive, #current {
+	#studioSect, #marketSect {
 		width: 46%;
 	}
 	#btnWrapper {
@@ -398,10 +398,10 @@ svg {
 	#sheet {
 		z-index: 6;
 	}
-	#portfolioIndex, #paintingIndex {
+	#studio, #market {
 		display: none;
 	}
-	#ellaPage {
+	#ella {
 		overflow: auto;
 		height: 100vh;
 	}
