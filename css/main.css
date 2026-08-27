@@ -75,59 +75,59 @@ nav a div {
     padding: 1vh 0 1vh 0;
 	white-space: nowrap;
 }
-#portfolio, #ella, #contact {
+#studioBtn, #ellaBtn, #marketBtn {
     transition: 0.4s;
 }
 
 /* Navigation buttons */
-#portfolio {
+#studioBtn {
 	background: rgb(230, 230, 230, 0.65);
 	float: left;
 	animation: .8s ease-in-out Nella;
 }
-#ella {
+#ellaBtn {
 	background: #8C0000;
 	animation: .8s ease-in-out ella;
 	color: white;
 }
-#contact {
+#marketBtn {
 	color: white;
 	background: rgb(26, 26, 26, 0.65);
     float: right;
 	animation: .8s ease-in-out Nella;
 
 }
-#portfolio:hover {
+#studioBtn:hover {
 	background: rgb(0, 0, 0, 0.85);
 	color: white;
 }
 
-#contact:hover {
+#marketBtn:hover {
 	background: rgb(255, 255, 255, 0.85);
 	color: black;
 }
 
 /* Arrows */
-#portfolio span {
+#studioBtn span {
 	transform: rotate(135deg);
 	border-color: rgb(230, 230, 230, 0);
 }
-#ella span {
+#ellaBtn span {
 	border-color: #8C0000;
 }	
-#contact span {
+#marketBtn span {
 	transform: rotate(-45deg);
 	border-color: rgb(255, 255, 255, 0);
 }
-#portfolio:hover span {
+#studioBtn:hover span {
 	border-color: white;
 	margin: 0 5vh 0.3vh 0;
 }
-#ella:hover span {
+#ellaBtn:hover span {
 	border-color: white;
 	margin: 0vh 5vh 0.3vh 5vh;
 }
-#contact:hover span {
+#marketBtn:hover span {
 	border-color: black;
 	margin: 0 0 0.3vh 5vh;
 }
@@ -136,7 +136,7 @@ nav a div {
 
 /* Phone */
 @media only screen and (max-width: 600px) {
-	#portfolio, #contact {
+	#studioBtn, #marketBtn {
 		display: none;
 	}
 	nav {
@@ -154,7 +154,7 @@ nav a div {
 	nav a div {
 		width: 100%;
 	}
-	#ella {
+	#ellaBtn {
 		display: none;
 	}
 	#ellaPhone {
