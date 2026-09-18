@@ -1,7 +1,16 @@
+h3 {
+	font-size: 3vh;
+    color: var(--theme);
+    margin: 3vh 0;
+}
+section:not(#tool-collab) p a {
+	text-decoration: revert;
+}
 iframe {
 	width: 100%;
 	aspect-ratio: 53/30;
 	filter: saturate(1.5);
+	margin-bottom: -1vh;
 }
 .invisible {
 	height: 0;
@@ -20,13 +29,13 @@ iframe {
 	margin: 5vh 40%;
 	width: 20%;
 	height: 0.3vh;
-	background: #8C0000;
+	background: var(--theme);
 }
 #contNav {
 	height: 100dvh;
     float: right;
     width: 33.333%;
-    background: #8C0000;
+    background: var(--theme);
 	display: flex;
 	color: white;
 	font-family: "Chakra Petch", sans-serif;
@@ -50,6 +59,7 @@ iframe {
 	display: block;
 	margin: 1vh 0;
 	cursor: pointer;
+	text-transform: uppercase;
 	transition: font-size .5s;
 	&:hover {
 		font-weight: bold;
@@ -68,9 +78,11 @@ iframe {
 }
 
 /* Modules */
+section {
+	padding-bottom: 3vh;
+}
 .side-by-side {
 	display: flex;
-	padding-bottom: 3vh;
 }
 .side-by-side > * {
 	width: 50%;
@@ -86,15 +98,23 @@ iframe {
 	padding-left: 1.5vh;
 	text-align: right;
 }
-.italic {
+.caption {
+	font-family: "Chakra Petch", sans-serif;
+	font-weight: lighter;
+	font-size: 2vh;
+	margin: -2vh 0 1vh 0;
+	opacity: .65;
+}
+#location, #date, #tool-collab p, .caption {
 	font-style: italic;
 }
-.orange {
-	color: #8C0000;
-	font-weight: 500;
-	font-size: 3vh;
-	margin-top: 5vh;
-	margin-bottom: 5vh;
+#tool-collab a::after {
+    content: url('/img/link.svg');
+    padding-left: 1vh;
+    display: inline-block;
+    width: 2vh;
+    height: 2vh;
+    vertical-align: sub;
 }
 #progress {
 	display: none;
@@ -103,7 +123,7 @@ iframe {
 /* Page navigation */
 #pageNav {
 	width: 33.333333333333%;
-	background: #8C0000;
+	background: var(--theme);
 	float: right;
 	height: 100dvh;
 	color: white;
@@ -136,7 +156,7 @@ nav {
 		content:'';
 		display: block;
 		height: 1vh;
-		background: #8C0000;
+		background: var(--theme);
 		position: fixed;
 		top: 0;
 		left: 0;
@@ -148,8 +168,11 @@ nav {
 	nav {
 		display: none;
 	}
-	p, .orange {
-		margin: 1.5vh;
+	h3 {
+		margin: 3vh 2vh;
+	}
+	p {
+		margin: 2vh;
 	}
 	#contNav {
 		display: none;
@@ -162,18 +185,21 @@ nav {
 	#wrapper h1 {
 		margin: 0 1vh;
 		font-size: 5vh;
-		padding: 10vh 0;
+		padding-top: 10vh;
 	}
 	#modules {
 		width: 100%;
 	}
+	section {
+		padding: 0;
+	}
 	.side-by-side {
 		display: revert;
-		padding: 0;
 	}
 	.side-by-side > *:first-child, .side-by-side > *:last-child {
 		width: 100%;
 		padding: 0;
+		text-align: left;
 	}
 	@keyframes scaleProgress {
 		0% {

@@ -1,4 +1,7 @@
 /* General */
+:root {
+	--theme: #8C0000;
+}
 html {
 	scroll-behavior: smooth;
 }
@@ -13,7 +16,7 @@ body {
 	width: 0.5vh;
 }
 ::-webkit-scrollbar-thumb {
-	background: #8C0000;
+	background: var(--theme);
 }
 img {
     width: 100%;
@@ -21,21 +24,22 @@ img {
 	filter: saturate(1.5);
 }
 h1 {
-    opacity: 0.85;
     font-weight: 700;
     font-size: 10vh;
 	pointer-events: none;
+	text-transform: uppercase;
 }
 h2 {
-    opacity: 0.85;
     font-weight: 600;
     font-size: 4vh;
 	transition: 0.4s;
 	pointer-events: none;
+	text-transform: uppercase;
 }
 p {
     font-family: "Chakra Petch", sans-serif;
 	font-weight: lighter;
+	margin: 2vh 0;
 }
 a {
     text-decoration: none;
@@ -72,7 +76,7 @@ nav a div {
     width: 33.333%;
     font-weight: 600;
     display: inline-block;
-    padding: 1vh 0 1vh 0;
+    padding: 1vh 0;
 	white-space: nowrap;
 }
 #studioBtn, #ellaBtn, #marketBtn {
@@ -86,7 +90,7 @@ nav a div {
 	animation: .8s ease-in-out Nella;
 }
 #ellaBtn {
-	background: #8C0000;
+	background: var(--theme);
 	animation: .8s ease-in-out ella;
 	color: white;
 }
@@ -113,7 +117,7 @@ nav a div {
 	border-color: rgb(230, 230, 230, 0);
 }
 #ellaBtn span {
-	border-color: #8C0000;
+	border-color: var(--theme);
 }	
 #marketBtn span {
 	transform: rotate(-45deg);
